@@ -92,4 +92,4 @@ The following parameters in the configuration file are important for controlling
 
 # Acknowledgements:
 
-This project builds on the setting proposed by Brittain et. al.: https://arxiv.org/pdf/2003.08353
+This project builds on the code base created by Brittain et. al.: https://arxiv.org/pdf/2003.08353
