@@ -1,0 +1,42 @@
+[
+    {
+        "scenario_num": 1,
+        "shield_total": 508,
+        "shield_total_intersection": 261,
+        "shield_total_route": 247,
+        "max_travel_time": 1680.0,
+        "los": 3
+    },
+    {
+        "scenario_num": 2,
+        "shield_total": 332,
+        "shield_total_intersection": 174,
+        "shield_total_route": 158,
+        "max_travel_time": 1176.0,
+        "los": 0
+    },
+    {
+        "scenario_num": 3,
+        "shield_total": 200,
+        "shield_total_intersection": 157,
+        "shield_total_route": 43,
+        "max_travel_time": 1060.0,
+        "los": 1
+    },
+    {
+        "scenario_num": 4,
+        "shield_total": 328,
+        "shield_total_intersection": 276,
+        "shield_total_route": 52,
+        "max_travel_time": 2716.0,
+        "los": 2
+    },
+    {
+        "scenario_num": 5,
+        "shield_total": 123,
+        "shield_total_intersection": 93,
+        "shield_total_route": 30,
+        "max_travel_time": 6684.0,
+        "los": 0
+    }
+]

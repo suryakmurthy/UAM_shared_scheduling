@@ -1,0 +1,18 @@
+[
+    {
+        "scenario_num": 364,
+        "shield_total": 364,
+        "shield_total_intersection": 48,
+        "shield_total_route": 316,
+        "max_travel_time": 1648.0,
+        "los": 2
+    },
+    {
+        "scenario_num": 335,
+        "shield_total": 335,
+        "shield_total_intersection": 38,
+        "shield_total_route": 297,
+        "max_travel_time": 1532.0,
+        "los": 1
+    }
+]
