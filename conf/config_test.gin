@@ -1,0 +1,71 @@
+## Configuration file
+
+
+#  ---------------------------------------------------------------
+
+## ** Driver parameters **
+#  -----------------
+# Make 01 -> 005 and 01_1 -> 01
+Driver.run_name = 'test_csma_cd'  #'aircraft_30_no_vls_full_train'
+Driver.run_type = 'eval' # 'train' or 'eval'
+Driver.iterations= 1000
+Driver.num_workers = 1 # of parallel runners
+Driver.config_file = 'settings.cfg'
+Driver.gui = True
+Driver.weights_file = 'models/const_speed_train/best_model.h5' # used for evaluation
+
+# Shared Scheduling Protocol Parameters
+Driver.scenario_file =  'scenarios/generated_scenarios/test_case_5.scn'
+
+Driver.non_compliant_percentage = 0 # Percentage of non-compliant aircraft (Values between 0 and 1)
+Driver.protocol_active = True # Flag that determines if a protocol is active
+Driver.csma_cd_active = True # Flag that determines if CSMA/CD is active
+Driver.srtf_active = False # Flag that determines if SRTF is active
+Driver.round_robin_active = False # Flag that determines if Round Robin is active
+Driver.testing_scenarios = 100
+
+
+## Case Study parameters
+Driver.max_steps = 32 ## How many transitions to collect in the environment
+Driver.simdt = 4 # seconds
+Driver.speeds = [5,0,60] ## change to [156, 0, 346] for commercial | [0,0,84] for UAM
+
+## State-Termination
+Driver.LOS = 150 # 10 meters from intruder, change to 3 (nm) for commercial
+Driver.dGoal = 500 # 100 meters from goal, change to 5 (nm) for commercial
+Driver.maxRewardDistance = 1000 # intruders within 100 meters are considered for reward, change to 20 (nm) for commercial
+Driver.intruderThreshold = 750 #  meters distance to consider intruders in ownship state, change to 50 (nm) for commercial
+
+## Reward Function
+Driver.rewardBeta = 0.0001
+Driver.rewardAlpha = 0.1
+Driver.speedChangePenalty = 0.0001
+Driver.shieldPenalty = 0.0001
+Driver.rewardLOS = -1
+Driver.stepPenalty = 0.002
+Driver.clearancePenalty = 0.005
+Driver.traffic_manager_active = True
+Driver.d2mav_active = True
+## Non-cooperative
+Driver.non_coop_tag = 0 # 0 means all are coorperative. 1 means Loss of Control (maintain same speed). 2 means Loss of Communication (Other aircraft cannot see it)
+
+
+#  ---------------------------------------------------------------
+
+
+## ** Agent parameters **
+Agent.max_agents = 50
+Agent.batch_size = 512
+Agent.epochs = 6
+Agent.entropy_beta = 1e-3
+Agent.clip_loss = 0.2
+Agent.action_predict = False
+Agent.nodes = 512
+Agent.num_models = 1
+Agent.equipped = True
+Agent.loss_weights = [1.0,0.01]
+
+
+
+
+#  ---------------------------------------------------------------
